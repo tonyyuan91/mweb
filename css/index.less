@@ -1,0 +1,181 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #f2f4f7;
+}
+a {text-decoration: none;}
+// 约束当屏幕大于750px，html字体大小不再变化
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+.warp {
+    background-color: #fff;
+    padding-bottom: 1.146667rem;
+}
+.header {
+    height: 2.133333rem;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    line-height: 2.133333rem;
+    font-size: .933333rem;
+    color: #1c1c1c;
+}
+.nav {
+    display: flex;
+    // item 换行显示
+    padding: 1.2rem 0 1.6rem 0;
+    flex-wrap: wrap;
+    .item {
+        display: flex;
+        width: 33.33%;
+        // 纵向显示
+        flex-direction: column;
+        // 水平居中
+        align-items: center;
+        img {
+            width: 3.706667rem;
+            height: 3.706667rem;
+        }
+        span {
+            font-size: .666667rem;
+            color: #707070;
+        }
+        // 选择前3个
+        &:nth-child(-n+3) {
+            margin-bottom: 1.653333rem;
+        }
+    } 
+}
+.go {
+    margin: 0 .48rem;
+}
+.content {
+    padding: 1.066667rem .64rem;
+    background-color: #fff;
+    margin-top: .266667rem;
+    .con_hd {
+        display: flex;
+        justify-content: space-between;
+        height: 1.013333rem;
+        line-height: 1.013333rem;
+        margin-bottom: .906667rem;
+        h4 {
+            margin: 0;
+            font-size: .746667rem;
+            color: #333;
+           .icon {
+               display: inline-block;
+               width: 1.013333rem;
+               height: 1.013333rem;
+            //    让后面的文字垂直居中
+               vertical-align: middle;
+           } 
+        }
+        .more {
+            font-size: .586667rem;
+            color: #999;
+        }
+    }
+}
+.get_job_focus {
+    position: relative;
+    .swiper-container {
+      width: 14.4rem;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+	  transition: 300ms;
+      transform: scale(0.8);
+      opacity: 0.4;
+      a {
+          width: 9.013333rem;
+          height: 10.026667rem;
+          img {
+              width: 100%;
+              height: 100%;
+          }
+      }
+      p {
+          width: 9.013333rem;
+          font-size: .666667rem;
+          margin-top: .64rem;
+          color: #333;
+      }
+    }
+    // 当前选中的slide
+	.swiper-slide-active,.swiper-slide-duplicate-active{
+      transform: scale(1);
+      z-index: 999;
+      opacity: 1;
+	}
+}
+// 学习模块轮播图
+.study_con {
+    margin-bottom: 3.2rem !important;
+}
+.study {
+    .study_fo {
+        padding: .266667rem;
+    }
+     .swiper-slide {
+      font-size: 18px;
+      background: #fff;
+      width: 7.733333rem;
+      height: 9.066667rem;
+      background-color:#fff;
+      border-radius: .266667rem;
+      box-shadow: 0 0px 10px rgba(0, 0, 0, .1);
+      h5 {
+          font-size: .693333rem;
+          margin: .533333rem 0;
+          font-weight: 400;
+          padding: 0 .266667rem;
+      }
+      p {
+          font-size: .693333rem;
+          color: #ff4400;
+          padding: 0 .266667rem;
+      }
+    }
+}
+// footer区域
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.933333rem;
+    width: 100% ;
+    background-color: #fff;
+    z-index: 99999;
+    display: flex;
+    padding: .533333rem;
+    border-top: 1px solid #ccc;
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 1.04rem;
+            height: 1.093333rem;
+        }
+        p {
+            font-size: .586667rem;
+            color: #666;
+            margin-top: .266667rem;
+        }
+    }
+}
